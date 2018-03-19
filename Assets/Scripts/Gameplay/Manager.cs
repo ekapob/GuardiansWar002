@@ -6,6 +6,7 @@ public class Manager : MonoBehaviour {
 
 	void Awake ()
 	{
+		buildName = null;
 		if (instance != null) 
 		{
 			return;
@@ -14,6 +15,7 @@ public class Manager : MonoBehaviour {
 	}
 
 	private TurretBlueprint turretToBuild;
+	public string buildName;
 	private Node selectedNode;
 
 	public NodeUI nodeUI;
@@ -45,10 +47,10 @@ public class Manager : MonoBehaviour {
 		nodeUI.Hide ();
 	}
 
-	public void SelectTurretToBuild (TurretBlueprint turret)
+	public void SelectTurretToBuild (TurretBlueprint turret,string name)
 	{
 		turretToBuild = turret;
-
+		buildName = name;
 		DeselectNode ();
 	}
 

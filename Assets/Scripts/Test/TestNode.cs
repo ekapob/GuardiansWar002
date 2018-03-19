@@ -28,14 +28,17 @@ public class TestNode : MonoBehaviour {
 
 	public void OnMouseDown(){
 		if (!CanvasGameplayControl.Instance.winStat) {
+			if (Manager.instance.buildName == null)
+				return;
 			if (PlayerNetwork.Instance.joinRoomNum.ToString () == tag) {
 				if (turret != null) {
-					Debug.Log ("Not Null Dude");
+					//Debug.Log ("Not Null Dude");
 					return;
 				}
 				CameraController.Instance.currentClickNode = nodeNo;
-				Debug.Log ("Current : " + CameraController.Instance.currentClickNode);
-				CameraController.Instance.CreateTower ();
+				//Debug.Log ("Current : " + CameraController.Instance.currentClickNode);
+				CameraController.Instance.CreateTower (Manager.instance.buildName);
+				Manager.instance.buildName = null;
 				turret = this.gameObject;
 			}
 		}

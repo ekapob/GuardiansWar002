@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{27ACC0A3-9B43-6CF7-5E32-492390E2902C}</ProjectGuid>
+    <ProjectGuid>{579EA3B5-57B6-BA42-4EA1-6BDE2BF6D1C8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -470,16 +470,16 @@
  <HintPath>D:/Program Files (x86)/Unity 5.5.2/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
- <HintPath>C:/Users/ekapo/Documents/GitHub/GuardiansWar001/GuardiansWar/Assets/Photon Unity Networking/Editor/PhotonNetwork/Newtonsoft.Json.dll</HintPath>
+ <HintPath>C:/Users/ekapo/Documents/GitHub/GuardiansWar002/Assets/Photon Unity Networking/Editor/PhotonNetwork/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="Photon3Unity3D">
- <HintPath>C:/Users/ekapo/Documents/GitHub/GuardiansWar001/GuardiansWar/Assets/Plugins/Photon3Unity3D.dll</HintPath>
+ <HintPath>C:/Users/ekapo/Documents/GitHub/GuardiansWar002/Assets/Plugins/Photon3Unity3D.dll</HintPath>
  </Reference>
  <Reference Include="UTNotifications">
- <HintPath>C:/Users/ekapo/Documents/GitHub/GuardiansWar001/GuardiansWar/Assets/Plugins/UTNotifications.dll</HintPath>
+ <HintPath>C:/Users/ekapo/Documents/GitHub/GuardiansWar002/Assets/Plugins/UTNotifications.dll</HintPath>
  </Reference>
  <Reference Include="websocket-sharp">
- <HintPath>C:/Users/ekapo/Documents/GitHub/GuardiansWar001/GuardiansWar/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
+ <HintPath>C:/Users/ekapo/Documents/GitHub/GuardiansWar002/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>D:/Program Files (x86)/Unity 5.5.2/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
@@ -493,9 +493,9 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{FA782C4C-3D08-9305-AE8D-2A75FAAAAC1B}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{90EDA55D-AFB1-82F7-7F18-8763E44F7C50}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{F5A99BC9-4821-C9C7-ECD0-695FA5F946C9}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{78FB6476-99A7-454A-1E01-D1DA5817E34A}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
