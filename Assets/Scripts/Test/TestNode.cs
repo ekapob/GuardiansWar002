@@ -6,7 +6,8 @@ public class TestNode : MonoBehaviour {
 
 	public int nodeNo;
 	public Color hoverColor;
-	private GameObject turret;
+	[SerializeField]
+	private string turret;
 	private Renderer rend;
 	private Color startColor;
 	public static TestNode Instance;
@@ -32,14 +33,12 @@ public class TestNode : MonoBehaviour {
 				return;
 			if (PlayerNetwork.Instance.joinRoomNum.ToString () == tag) {
 				if (turret != null) {
-					//Debug.Log ("Not Null Dude");
 					return;
 				}
 				CameraController.Instance.currentClickNode = nodeNo;
-				//Debug.Log ("Current : " + CameraController.Instance.currentClickNode);
+				turret = Manager.instance.buildName;
 				CameraController.Instance.CreateTower (Manager.instance.buildName);
 				Manager.instance.buildName = null;
-				turret = this.gameObject;
 			}
 		}
 	}

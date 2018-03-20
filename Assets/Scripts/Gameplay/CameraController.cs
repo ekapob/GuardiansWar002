@@ -93,20 +93,20 @@ public class CameraController : Photon.MonoBehaviour {
 
 	public void CreateTower(string name){
 		if (PlayerNetwork.Instance.joinRoomNum == 1) {
-			photonView.RPC ("RPC_CreateTowerP1", PhotonTargets.All,currentClickNode);
+			photonView.RPC ("RPC_CreateTowerP1", PhotonTargets.All,currentClickNode,Manager.instance.buildName);
 		}
 		else if (PlayerNetwork.Instance.joinRoomNum == 2) {
-			photonView.RPC ("RPC_CreateTowerP2", PhotonTargets.All,currentClickNode);
+			photonView.RPC ("RPC_CreateTowerP2", PhotonTargets.All,currentClickNode,Manager.instance.buildName);
 		}
 	}
 
 	//P1 Missile
 	[PunRPC]
-	private void RPC_CreateTowerP1(int currentNode){
-		PhotonNetwork.Instantiate (Path.Combine ("Prefabs", "MissileLauncher"), TestNode1.Instance.node[currentNode].transform.position, TestNode1.Instance.node[currentNode].transform.rotation, 0);
+	private void RPC_CreateTowerP1(int currentNode,string turretName){
+		PhotonNetwork.Instantiate (Path.Combine ("Prefabs", turretName), TestNode1.Instance.node[currentNode].transform.position, TestNode1.Instance.node[currentNode].transform.rotation, 0);
 	}
 	[PunRPC]
-	private void RPC_CreateTowerP2(int currentNode){
-		PhotonNetwork.Instantiate (Path.Combine ("Prefabs", "MissileLauncher"), TestNode2.Instance.node[currentNode].transform.position, TestNode2.Instance.node[currentNode].transform.rotation, 0);
+	private void RPC_CreateTowerP2(int currentNode,string turretName){
+		PhotonNetwork.Instantiate (Path.Combine ("Prefabs", turretName), TestNode2.Instance.node[currentNode].transform.position, TestNode2.Instance.node[currentNode].transform.rotation, 0);
 	}
 }
