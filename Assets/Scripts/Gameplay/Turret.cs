@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Turret : Photon.MonoBehaviour {
 
@@ -8,6 +9,7 @@ public class Turret : Photon.MonoBehaviour {
 	public bool UseTransformView = true;
 	private Vector3 TargetPosition;
 	private Quaternion TargetRotation;
+	public GameObject TurretUI;
 
 	[Header("General")]
 
@@ -39,6 +41,7 @@ public class Turret : Photon.MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		TurretUI.SetActive (true);
 		PhotonView = GetComponent<PhotonView> ();
 		InvokeRepeating("UpdateTarget", 0f, 0.5f);
 	}
@@ -163,5 +166,10 @@ public class Turret : Photon.MonoBehaviour {
 			TargetPosition = (Vector3)stream.ReceiveNext ();
 			TargetRotation = (Quaternion)stream.ReceiveNext ();
 		}
+	}
+
+	public void OnClickSell(){
+		//bug
+		//PhotonNetwork.Destroy(gameObject);
 	}
 }

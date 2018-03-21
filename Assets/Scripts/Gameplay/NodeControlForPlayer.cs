@@ -13,10 +13,10 @@ public class NodeControlForPlayer : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Instance = this;
-		playerNodeK1.SetActive (false);
+		/*playerNodeK1.SetActive (false);
 		playerNodeK2.SetActive (false);
 		playerNodeM1.SetActive (false);
-		playerNodeM2.SetActive (false);
+		playerNodeM2.SetActive (false);*/
 	}
 
 	// Update is called once per frame

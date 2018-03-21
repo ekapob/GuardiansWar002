@@ -15,6 +15,7 @@ public class TestNode : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Instance = this;
+		turret = null;
 		rend = GetComponent<Renderer> ();
 		startColor = rend.material.color;
 	}
@@ -22,22 +23,25 @@ public class TestNode : MonoBehaviour {
 
 	public void OnMouseEnter(){
 		if (!CanvasGameplayControl.Instance.winStat) {
-			if (PlayerNetwork.Instance.joinRoomNum.ToString () == tag)
-				rend.material.color = hoverColor;
+			if (turret == null) {
+				if (PlayerNetwork.Instance.joinRoomNum.ToString () == tag)
+					rend.material.color = hoverColor;
+			}
 		}
 	}
 
 	public void OnMouseDown(){
 		if (!CanvasGameplayControl.Instance.winStat) {
-			if (Manager.instance.buildName == null)
+			if (Manager.instance.buildName == null) {
 				return;
+			}
 			if (PlayerNetwork.Instance.joinRoomNum.ToString () == tag) {
 				if (turret != null) {
 					return;
 				}
 				CameraController.Instance.currentClickNode = nodeNo;
-				turret = Manager.instance.buildName;
 				CameraController.Instance.CreateTower (Manager.instance.buildName);
+				turret = Manager.instance.buildName;
 				Manager.instance.buildName = null;
 			}
 		}

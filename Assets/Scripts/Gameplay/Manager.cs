@@ -51,6 +51,7 @@ public class Manager : MonoBehaviour {
 	{
 		turretToBuild = turret;
 		buildName = name;
+		Debug.Log (name);
 		DeselectNode ();
 	}
 
