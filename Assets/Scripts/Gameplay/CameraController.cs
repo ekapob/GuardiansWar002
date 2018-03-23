@@ -19,6 +19,7 @@ public class CameraController : Photon.MonoBehaviour {
 	private GameObject turretToBuildx; // prefab of tower need to add more
 	public GameObject standardTurretPrefabx;
 	public int currentClickNode;
+	public GameObject[] tower = new GameObject[42];
 
 	void Start (){
 		Instance = this;
@@ -100,15 +101,6 @@ public class CameraController : Photon.MonoBehaviour {
 		}
 	}
 
-	public void DestroyTower(){
-		if (PlayerNetwork.Instance.joinRoomNum == 1) {
-			photonView.RPC ("RPC_DestroyTowerP1", PhotonTargets.Others);
-		}
-		else if (PlayerNetwork.Instance.joinRoomNum == 2) {
-			photonView.RPC ("RPC_DestroyTowerP2", PhotonTargets.Others);
-		}
-	}
-
 	//P1 Missile
 	[PunRPC]
 	private void RPC_CreateTowerP1(int currentNode,string turretName){
@@ -117,11 +109,5 @@ public class CameraController : Photon.MonoBehaviour {
 	[PunRPC]
 	private void RPC_CreateTowerP2(int currentNode,string turretName){
 		PhotonNetwork.Instantiate (Path.Combine ("Prefabs", turretName), TestNode2.Instance.node[currentNode].transform.position, TestNode2.Instance.node[currentNode].transform.rotation, 0);
-	}
-	[PunRPC]
-	private void RPC_DestroyTowerP1(){
-	}
-	[PunRPC]
-	private void RPC_0TowerP2(){
 	}
 }

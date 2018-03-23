@@ -10,6 +10,7 @@ public class Turret : Photon.MonoBehaviour {
 	private Vector3 TargetPosition;
 	private Quaternion TargetRotation;
 	public GameObject TurretUI;
+	public int onNode;
 
 	[Header("General")]
 
@@ -41,6 +42,8 @@ public class Turret : Photon.MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		onNode = CameraController.Instance.currentClickNode;
+
 		TurretUI.SetActive (true);
 		PhotonView = GetComponent<PhotonView> ();
 		InvokeRepeating("UpdateTarget", 0f, 0.5f);
@@ -169,7 +172,20 @@ public class Turret : Photon.MonoBehaviour {
 	}
 
 	public void OnClickSell(){
-		//bug
-		//PhotonNetwork.Destroy(gameObject);
+
+		if (PlayerNetwork.Instance.joinRoomNum == 1) {
+			TestNode node = TestNode1.Instance.node [onNode];
+			node.SetNodeToNull ();
+		}
+		else if (PlayerNetwork.Instance.joinRoomNum == 2) {
+			TestNode node = TestNode2.Instance.node [onNode];
+			node.SetNodeToNull ();
+		}
+		photonView.RPC ("RPC_DestroyTower", PhotonTargets.Others);
+	}
+
+	[PunRPC]
+	private void RPC_DestroyTower(){
+		PhotonNetwork.Destroy (gameObject);
 	}
 }

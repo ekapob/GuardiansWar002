@@ -51,4 +51,7 @@ public class TestNode : MonoBehaviour {
 		rend.material.color = startColor;
 	}
 
+	public void SetNodeToNull(){
+		turret = null;
+	}
 }

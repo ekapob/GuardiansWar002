@@ -4,12 +4,14 @@
     <Files>
       <File FileName="Assets\Scripts\Gameplay\WaveSpawner.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Gameplay\Shop.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Gameplay\TurretBlueprint.cs" Line="11" Column="25" />
+      <File FileName="Assets\Scripts\Gameplay\TurretBlueprint.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Gameplay\Canvas\CanvasGameplayControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Gameplay\Manager.cs" Line="54" Column="20" />
-      <File FileName="Assets\Scripts\Gameplay\CameraController.cs" Line="123" Column="3" />
-      <File FileName="Assets\Scripts\Test\TestNode.cs" Line="44" Column="41" />
-      <File FileName="Assets\Scripts\Gameplay\Turret.cs" Line="171" Column="28" />
+      <File FileName="Assets\Scripts\Gameplay\Manager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Test\TestNode.cs" Line="55" Column="17" />
+      <File FileName="Assets\Scripts\Gameplay\CameraController.cs" Line="102" Column="3" />
+      <File FileName="Assets\Scripts\Gameplay\Turret.cs" Line="184" Column="59" />
+      <File FileName="Assets\Scripts\Test\TestNode1.cs" Line="8" Column="25" />
+      <File FileName="Assets\Scripts\Test\TestNode2.cs" Line="8" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

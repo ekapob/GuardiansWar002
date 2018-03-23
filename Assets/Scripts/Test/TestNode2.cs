@@ -5,7 +5,7 @@ using UnityEngine;
 public class TestNode2 : MonoBehaviour {
 
 	public static TestNode2 Instance;
-	public GameObject[] node;
+	public TestNode[] node;
 	// Use this for initialization
 	void Start () {
 		Instance = this;
