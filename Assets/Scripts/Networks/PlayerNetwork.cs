@@ -132,7 +132,6 @@ public class PlayerNetwork : MonoBehaviour {
 		Quaternion rotate = Quaternion.Euler(new Vector3(75, 0, 0));
 		GameObject obj =  PhotonNetwork.Instantiate (Path.Combine ("Prefabs", "PlayerCamera"), PauseAndExitButton.Instance.camSpawnPoint.transform.position,rotate, 0);
 		CurrentPlayer = obj.GetComponent<PlayerMovement> ();
-		Debug.Log (Path.Combine ("Prefabs", "PlayerSoul"));
 	}
 
 

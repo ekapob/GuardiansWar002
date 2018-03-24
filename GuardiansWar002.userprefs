@@ -7,9 +7,9 @@
       <File FileName="Assets\Scripts\Gameplay\TurretBlueprint.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Gameplay\Canvas\CanvasGameplayControl.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Gameplay\Manager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Test\TestNode.cs" Line="55" Column="17" />
-      <File FileName="Assets\Scripts\Gameplay\CameraController.cs" Line="102" Column="3" />
-      <File FileName="Assets\Scripts\Gameplay\Turret.cs" Line="184" Column="59" />
+      <File FileName="Assets\Scripts\Test\TestNode.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Gameplay\CameraController.cs" Line="45" Column="3" />
+      <File FileName="Assets\Scripts\Gameplay\Turret.cs" Line="78" Column="18" />
       <File FileName="Assets\Scripts\Test\TestNode1.cs" Line="8" Column="25" />
       <File FileName="Assets\Scripts\Test\TestNode2.cs" Line="8" Column="25" />
     </Files>

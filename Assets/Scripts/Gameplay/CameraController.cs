@@ -42,16 +42,16 @@ public class CameraController : Photon.MonoBehaviour {
 		if (!doMovement)
 			return;
 
-		if (Input.GetKey ("w") || Input.GetKey (KeyCode.UpArrow)/*|| Input.mousePosition.y >= Screen.height - panBorderThickness*/) {
+		if (Input.GetKey ("w") /*|| Input.GetKey (KeyCode.UpArrow)/*|| Input.mousePosition.y >= Screen.height - panBorderThickness*/) {
 			transform.Translate (Vector3.forward * panSpeed * Time.deltaTime, Space.World);
 		}
-		if (Input.GetKey ("s") || Input.GetKey (KeyCode.DownArrow)/*|| Input.mousePosition.y <= panBorderThickness*/) {
+		if (Input.GetKey ("s") /*|| Input.GetKey (KeyCode.DownArrow)|| Input.mousePosition.y <= panBorderThickness*/) {
 			transform.Translate (Vector3.back * panSpeed * Time.deltaTime, Space.World);
 		}
-		if (Input.GetKey ("d") || Input.GetKey (KeyCode.RightArrow)/*|| Input.mousePosition.x >= Screen.width - panBorderThickness*/) {
+		if (Input.GetKey ("d") /*|| Input.GetKey (KeyCode.RightArrow)|| Input.mousePosition.x >= Screen.width - panBorderThickness*/) {
 			transform.Translate (Vector3.right * panSpeed * Time.deltaTime, Space.World);
 		}
-		if (Input.GetKey ("a") || Input.GetKey (KeyCode.LeftArrow)/*|| Input.mousePosition.x <= panBorderThickness*/) {
+		if (Input.GetKey ("a") /*|| Input.GetKey (KeyCode.LeftArrow)|| Input.mousePosition.x <= panBorderThickness*/) {
 			transform.Translate (Vector3.left * panSpeed * Time.deltaTime, Space.World);
 		}
 
@@ -94,10 +94,10 @@ public class CameraController : Photon.MonoBehaviour {
 
 	public void CreateTower(string name){
 		if (PlayerNetwork.Instance.joinRoomNum == 1) {
-			photonView.RPC ("RPC_CreateTowerP1", PhotonTargets.Others,currentClickNode,Manager.instance.buildName);
+			photonView.RPC ("RPC_CreateTowerP1", PhotonTargets.MasterClient,currentClickNode,Manager.instance.buildName);
 		}
 		else if (PlayerNetwork.Instance.joinRoomNum == 2) {
-			photonView.RPC ("RPC_CreateTowerP2", PhotonTargets.Others,currentClickNode,Manager.instance.buildName);
+			photonView.RPC ("RPC_CreateTowerP2", PhotonTargets.MasterClient,currentClickNode,Manager.instance.buildName);
 		}
 	}
 

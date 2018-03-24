@@ -172,16 +172,16 @@ public class Turret : Photon.MonoBehaviour {
 	}
 
 	public void OnClickSell(){
-
-		if (PlayerNetwork.Instance.joinRoomNum == 1) {
-			TestNode node = TestNode1.Instance.node [onNode];
-			node.SetNodeToNull ();
+		if (photonView.isMine) {
+			if (PlayerNetwork.Instance.joinRoomNum == 1) {
+				TestNode node = TestNode1.Instance.node [onNode];
+				node.SetNodeToNull ();
+			} else if (PlayerNetwork.Instance.joinRoomNum == 2) {
+				TestNode node = TestNode2.Instance.node [onNode];
+				node.SetNodeToNull ();
+			}
+			photonView.RPC ("RPC_DestroyTower", PhotonTargets.MasterClient);
 		}
-		else if (PlayerNetwork.Instance.joinRoomNum == 2) {
-			TestNode node = TestNode2.Instance.node [onNode];
-			node.SetNodeToNull ();
-		}
-		photonView.RPC ("RPC_DestroyTower", PhotonTargets.Others);
 	}
 
 	[PunRPC]
