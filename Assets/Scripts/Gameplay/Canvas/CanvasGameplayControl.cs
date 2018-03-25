@@ -43,4 +43,6 @@ public class CanvasGameplayControl : MonoBehaviour {
 			PauseAndExitButton.Instance.exitButton.SetActive (false);
 		}
 	}
+
+
 }

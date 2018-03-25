@@ -104,10 +104,10 @@ public class CameraController : Photon.MonoBehaviour {
 	//P1 Missile
 	[PunRPC]
 	private void RPC_CreateTowerP1(int currentNode,string turretName){
-		PhotonNetwork.Instantiate (Path.Combine ("Prefabs", turretName), TestNode1.Instance.node[currentNode].transform.position, TestNode1.Instance.node[currentNode].transform.rotation, 0);
+		GameObject objTurret = PhotonNetwork.Instantiate (Path.Combine ("Prefabs", turretName), TestNode1.Instance.node[currentNode].transform.position, TestNode1.Instance.node[currentNode].transform.rotation, 0);
 	}
 	[PunRPC]
 	private void RPC_CreateTowerP2(int currentNode,string turretName){
-		PhotonNetwork.Instantiate (Path.Combine ("Prefabs", turretName), TestNode2.Instance.node[currentNode].transform.position, TestNode2.Instance.node[currentNode].transform.rotation, 0);
+		GameObject objTurret = PhotonNetwork.Instantiate (Path.Combine ("Prefabs", turretName), TestNode2.Instance.node[currentNode].transform.position, TestNode2.Instance.node[currentNode].transform.rotation, 0);
 	}
 }

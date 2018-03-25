@@ -124,14 +124,12 @@ public class PlayerNetwork : MonoBehaviour {
 	[PunRPC]
 	private void RPC_CreatePlayer(){
 		GameObject obj =  PhotonNetwork.Instantiate (Path.Combine ("Prefabs", "PlayerSoul"), CanvasGameButton.Instance.spawner1[joinRoomNum-1].transform.position, Quaternion.identity, 0);
-		CurrentPlayer = obj.GetComponent<PlayerMovement> ();
 	}
 	//Spawn player controlable unit
 	[PunRPC]
 	private void RPC_CreatePlayerCam(){
 		Quaternion rotate = Quaternion.Euler(new Vector3(75, 0, 0));
 		GameObject obj =  PhotonNetwork.Instantiate (Path.Combine ("Prefabs", "PlayerCamera"), PauseAndExitButton.Instance.camSpawnPoint.transform.position,rotate, 0);
-		CurrentPlayer = obj.GetComponent<PlayerMovement> ();
 	}
 
 

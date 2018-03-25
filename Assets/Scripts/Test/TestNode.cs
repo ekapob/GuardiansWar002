@@ -7,7 +7,9 @@ public class TestNode : MonoBehaviour {
 	public int nodeNo;
 	public Color hoverColor;
 	[SerializeField]
-	private string turret;
+	private GameObject turret;
+	[SerializeField]
+	private Turret turretScript;
 	private Renderer rend;
 	private Color startColor;
 	public static TestNode Instance;
@@ -32,26 +34,38 @@ public class TestNode : MonoBehaviour {
 
 	public void OnMouseDown(){
 		if (!CanvasGameplayControl.Instance.winStat) {
-			if (Manager.instance.buildName == null) {
-				return;
-			}
-			if (PlayerNetwork.Instance.joinRoomNum.ToString () == tag) {
-				if (turret != null) {
+			if (turret != null) {
+				if(PlayerNetwork.Instance.joinRoomNum.ToString () == tag)
+					turretScript.turretUI.SetActive (true);
+			} else {
+				if (Manager.instance.buildName == null) {
 					return;
 				}
-				CameraController.Instance.currentClickNode = nodeNo;
-				CameraController.Instance.CreateTower (Manager.instance.buildName);
-				turret = Manager.instance.buildName;
-				Manager.instance.buildName = null;
+				if (PlayerNetwork.Instance.joinRoomNum.ToString () == tag) {
+					CameraController.Instance.currentClickNode = nodeNo;
+					CameraController.Instance.CreateTower (Manager.instance.buildName);
+					Manager.instance.buildName = null;
+				}
 			}
 		}
 	}
 
 	public void OnMouseExit(){
 		rend.material.color = startColor;
+		//turretScript.turretUI.SetActive (false);
+	}
+
+	public void SetTurret(GameObject obj,Turret script){
+		turret = obj;
+		turretScript = script;
 	}
 
 	public void SetNodeToNull(){
 		turret = null;
 	}
+
+	public Turret GetTurretOnNode(){
+		return turretScript;
+	}
+
 }

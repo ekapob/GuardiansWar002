@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.IO;
 
 public class Turret : Photon.MonoBehaviour {
 
@@ -9,8 +10,9 @@ public class Turret : Photon.MonoBehaviour {
 	public bool UseTransformView = true;
 	private Vector3 TargetPosition;
 	private Quaternion TargetRotation;
-	public GameObject TurretUI;
 	public int onNode;
+	public GameObject turretUI;
+	public GameObject upGradePrefab;
 
 	[Header("General")]
 
@@ -42,9 +44,18 @@ public class Turret : Photon.MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		turretUI.SetActive (false);
 		onNode = CameraController.Instance.currentClickNode;
-
-		TurretUI.SetActive (true);
+		if (photonView.isMine) {
+			if (PlayerNetwork.Instance.joinRoomNum == 1) {
+				TestNode setTurret = TestNode1.Instance.node [onNode];
+				setTurret.SetTurret (gameObject,this);
+			}
+			if (PlayerNetwork.Instance.joinRoomNum == 2) {
+				TestNode setTurret = TestNode2.Instance.node [onNode];
+				setTurret.SetTurret (gameObject,this);
+			}
+		}
 		PhotonView = GetComponent<PhotonView> ();
 		InvokeRepeating("UpdateTarget", 0f, 0.5f);
 	}
@@ -187,5 +198,23 @@ public class Turret : Photon.MonoBehaviour {
 	[PunRPC]
 	private void RPC_DestroyTower(){
 		PhotonNetwork.Destroy (gameObject);
+	}
+
+	public void ShowUI(){
+		turretUI.SetActive (true);
+	}
+
+	public void HideUI(){
+		turretUI.SetActive (false);
+	}
+
+	public void OnClickUpgrade(){
+		photonView.RPC ("RPC_UpgradeTower", PhotonTargets.MasterClient,upGradePrefab.name);
+	}
+
+	[PunRPC]
+	private void RPC_UpgradeTower(string turretName){
+		GameObject objTurret = PhotonNetwork.Instantiate (Path.Combine ("Prefabs", turretName), transform.position, transform.rotation, 0);
+		photonView.RPC ("RPC_DestroyTower", PhotonTargets.MasterClient);
 	}
 }

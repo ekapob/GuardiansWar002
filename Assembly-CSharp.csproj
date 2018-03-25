@@ -209,6 +209,7 @@
      <Compile Include="Assets\Scripts\Gameplay\Bullet.cs" />
      <Compile Include="Assets\Scripts\Gameplay\CameraController.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Canvas\CanvasGameplayControl.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\CanvasNode.cs" />
      <Compile Include="Assets\Scripts\Gameplay\CoreScript.cs" />
      <Compile Include="Assets\Scripts\Gameplay\EndGamePause.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Enemy.cs" />
@@ -222,6 +223,7 @@
      <Compile Include="Assets\Scripts\Gameplay\Node.cs" />
      <Compile Include="Assets\Scripts\Gameplay\NodeControlForPlayer.cs" />
      <Compile Include="Assets\Scripts\Gameplay\NodeUI.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\NodeUITest.cs" />
      <Compile Include="Assets\Scripts\Gameplay\PlayerStats.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Shop.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Spawner\P1Spawner.cs" />
