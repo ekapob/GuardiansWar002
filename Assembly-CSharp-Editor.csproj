@@ -39,10 +39,10 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine">
-      <HintPath>D:/Program Files (x86)/Unity 5.5.2/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>D:/Program Files (x86)/Unity 5.5.2/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -128,6 +128,7 @@
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values\maps_attrs.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-af\location_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-ko\base_strings.xml" />
+     <None Include="Assets\Asset\Lava_Flowing_Shader\Shaders\Unlit_Lava_Simple.shader" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\color\wallet_secondary_text_holo_dark.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-zh-rCN\wallet_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-zh-rCN\base_strings.xml" />
@@ -170,6 +171,7 @@
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-es-rUS\base_strings.xml" />
      <None Include="Assets\Resources\config.txt" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-zh-rHK\location_strings.xml" />
+     <None Include="Assets\Asset\Lava_Flowing_Shader\Shaders\Diffuse_Lava_Distort.shader" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\color\common_plus_signin_btn_text_light.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-kk-rKZ\base_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-th\location_strings.xml" />
@@ -190,6 +192,7 @@
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-zh-rCN\common_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-sk\base_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-mn-rMN\location_strings.xml" />
+     <None Include="Assets\Asset\Lava_Flowing_Shader\Shaders\Unlit_Lava_Distort.shader" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-sw\base_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-eu-rES\common_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-pt\common_strings.xml" />
@@ -199,6 +202,7 @@
      <None Include="Assets\Plugins\release_history.txt" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-fr\wallet_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-iw\location_strings.xml" />
+     <None Include="Assets\Asset\Lava_Flowing_Shader\Shaders\Unlit_Lava_Distort_Transparent.shader" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-fa\common_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-pt-rPT\location_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-mr-rIN\base_strings.xml" />
@@ -256,6 +260,7 @@
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-de\location_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-es\common_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-hr\common_strings.xml" />
+     <None Include="Assets\Asset\Lava_Flowing_Shader\ReadMe.txt" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-en-rGB\base_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-te-rIN\location_strings.xml" />
      <None Include="Assets\Plugins\Android\unityads\res\drawable\unityads_icon_speaker_triangle.xml" />
@@ -422,73 +427,70 @@
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-is-rIS\base_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\proguard.txt" />
  <Reference Include="UnityEditor.Advertisements">
- <HintPath>D:/Program Files (x86)/Unity 5.5.2/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
- <HintPath>D:/Program Files (x86)/Unity 5.5.2/Unity/Editor/Data/UnityExtensions/Unity/EditorTestsRunner/Editor/nunit.framework.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/EditorTestsRunner/Editor/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.EditorTestsRunner">
- <HintPath>D:/Program Files (x86)/Unity 5.5.2/Unity/Editor/Data/UnityExtensions/Unity/EditorTestsRunner/Editor/UnityEditor.EditorTestsRunner.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/EditorTestsRunner/Editor/UnityEditor.EditorTestsRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/Program Files (x86)/Unity 5.5.2/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>D:/Program Files (x86)/Unity 5.5.2/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
- <HintPath>D:/Program Files (x86)/Unity 5.5.2/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Networking">
- <HintPath>D:/Program Files (x86)/Unity 5.5.2/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.PlaymodeTestsRunner">
- <HintPath>D:/Program Files (x86)/Unity 5.5.2/Unity/Editor/Data/UnityExtensions/Unity/PlaymodeTestsRunner/Editor/UnityEditor.PlaymodeTestsRunner.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/PlaymodeTestsRunner/Editor/UnityEditor.PlaymodeTestsRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.PlaymodeTestsRunner">
- <HintPath>D:/Program Files (x86)/Unity 5.5.2/Unity/Editor/Data/UnityExtensions/Unity/PlaymodeTestsRunner/UnityEngine.PlaymodeTestsRunner.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/PlaymodeTestsRunner/UnityEngine.PlaymodeTestsRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.TreeEditor">
- <HintPath>D:/Program Files (x86)/Unity 5.5.2/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
- <HintPath>D:/Program Files (x86)/Unity 5.5.2/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Analytics">
- <HintPath>D:/Program Files (x86)/Unity 5.5.2/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/Editor/UnityEditor.Analytics.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/Editor/UnityEditor.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.HoloLens">
- <HintPath>D:/Program Files (x86)/Unity 5.5.2/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
- <HintPath>D:/Program Files (x86)/Unity 5.5.2/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.VR">
- <HintPath>D:/Program Files (x86)/Unity 5.5.2/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.VR">
- <HintPath>D:/Program Files (x86)/Unity 5.5.2/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
- <HintPath>C:/Users/ekapo/Documents/GitHub/GuardiansWar002/Assets/Photon Unity Networking/Editor/PhotonNetwork/Newtonsoft.Json.dll</HintPath>
+ <HintPath>C:/Users/Acer E15/Desktop/Project/GuardiansWar002/Assets/Photon Unity Networking/Editor/PhotonNetwork/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="Photon3Unity3D">
- <HintPath>C:/Users/ekapo/Documents/GitHub/GuardiansWar002/Assets/Plugins/Photon3Unity3D.dll</HintPath>
+ <HintPath>C:/Users/Acer E15/Desktop/Project/GuardiansWar002/Assets/Plugins/Photon3Unity3D.dll</HintPath>
  </Reference>
  <Reference Include="UTNotifications">
- <HintPath>C:/Users/ekapo/Documents/GitHub/GuardiansWar002/Assets/Plugins/UTNotifications.dll</HintPath>
+ <HintPath>C:/Users/Acer E15/Desktop/Project/GuardiansWar002/Assets/Plugins/UTNotifications.dll</HintPath>
  </Reference>
  <Reference Include="websocket-sharp">
- <HintPath>C:/Users/ekapo/Documents/GitHub/GuardiansWar002/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
+ <HintPath>C:/Users/Acer E15/Desktop/Project/GuardiansWar002/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
- <HintPath>D:/Program Files (x86)/Unity 5.5.2/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.Android.Extensions">
- <HintPath>D:/Program Files (x86)/Unity 5.5.2/Unity/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
- <HintPath>D:/Program Files (x86)/Unity 5.5.2/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
